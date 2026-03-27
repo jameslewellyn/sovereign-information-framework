@@ -1,0 +1,32 @@
+services:
+  deals-tracker:
+    build: .
+    container_name: deals-tracker
+    restart: unless-stopped
+    volumes:
+      - ./conf:/app/conf          # brand watchlist + adapter configs (edit live)
+      - ./data:/app/data          # DuckDB persistent storage
+    env_file: .env
+    environment:
+      - ADAPTER_CONF_DIR=/app/conf/adapters
+      - WATCHLIST_PATH=/app/conf/brands/watchlist.yml
+      - DB_PATH=/app/data/deals.duckdb
+
+  # optional: Ollama for fully local LLM parsing (no API key needed)
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    volumes:
+      - ollama_models:/root/.ollama
+    ports:
+      - "11434:11434"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]   # remove if no GPU
+
+volumes:
+  ollama_models:

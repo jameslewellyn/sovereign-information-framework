@@ -1,0 +1,67 @@
+# Brand & category watchlist — EXAMPLE
+# Copy to watchlist.yml and customise with your own preferences.
+# ─────────────────────────────────────────────────────────────────────────
+# Structure:
+#   categories:
+#     <category_name>:
+#       priority: 1-3    (3 = highest, appears first in digest)
+#       brands:          (list of acceptable brand name fragments, case-insensitive)
+#       min_discount:    (optional) only alert if discount >= this %
+#       max_price:       (optional) only alert if sale_price <= this value
+#
+# Brand matching is substring — "President" matches "President's Choice"
+# Leave brands empty ([]) to match ANY brand in that category.
+# ─────────────────────────────────────────────────────────────────────────
+
+categories:
+
+  meat:
+    priority: 3
+    min_discount: 20
+    brands:
+      - Kirkland
+      - Member's Mark
+      # add your preferred brands here
+
+  dairy:
+    priority: 2
+    max_price: 6.00
+    brands:
+      - Organic Valley
+      - Horizon
+      # add your preferred brands here
+
+  coffee:
+    priority: 3
+    min_discount: 15
+    brands:
+      - Lavazza
+      - Kirkland
+      - Starbucks
+      # add your preferred brands here
+
+  paper-goods:
+    priority: 2
+    min_discount: 10
+    brands: []   # any brand
+
+  cleaning:
+    priority: 1
+    min_discount: 25
+    brands:
+      - Method
+      - Seventh Generation
+      - Dawn
+      - Tide
+
+  produce:
+    priority: 2
+    brands: []   # any brand
+    min_discount: 30
+
+  snacks:
+    priority: 1
+    brands:
+      - Kind
+      - Larabar
+      - RXBar

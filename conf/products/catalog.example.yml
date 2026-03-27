@@ -1,0 +1,70 @@
+# Product catalog — EXAMPLE
+# Copy to catalog.yml and add your own store URLs.
+# ─────────────────────────────────────────────────────────────────────────
+# Structure:
+#   categories:
+#     <category_slug>:
+#       label: "Human Readable Name"
+#       products:
+#         <product_slug>:
+#           label: "Human Readable Name"
+#           unit: "pack description for LLM hint"
+#           stores:
+#             <StoreName>: <product_page_url>
+#
+# product_slug is used as the primary key in the DB.
+# Only stores listed here will be scraped for everyday prices.
+# Find product page URLs by navigating to the item on the store's website.
+# ─────────────────────────────────────────────────────────────────────────
+
+categories:
+
+  paper-goods:
+    label: Paper Goods
+    products:
+      toilet-paper:
+        label: "Toilet Paper (Bulk)"
+        unit: "~30 rolls"
+        stores:
+          # Replace with the URLs for stores near you:
+          # Costco:   "https://www.costco.com/..."
+          # Walmart:  "https://www.walmart.com/ip/..."
+          # Target:   "https://www.target.com/p/..."
+
+      paper-towels:
+        label: "Paper Towels (Bulk)"
+        unit: "12 rolls"
+        stores:
+          # Costco:   "https://www.costco.com/..."
+          # Walmart:  "https://www.walmart.com/ip/..."
+
+  laundry:
+    label: Laundry Detergent
+    products:
+      laundry-liquid:
+        label: "Liquid Laundry Detergent (100+ loads)"
+        unit: "100 loads"
+        stores:
+          # Costco:   "https://www.costco.com/..."
+          # Walmart:  "https://www.walmart.com/ip/..."
+
+  coffee:
+    label: Coffee
+    products:
+      ground-coffee:
+        label: "Ground Coffee (~3 lb)"
+        unit: "per lb"
+        stores:
+          # Costco:   "https://www.costco.com/..."
+          # Walmart:  "https://www.walmart.com/ip/..."
+
+  dairy:
+    label: Dairy
+    products:
+      eggs:
+        label: "Eggs (1 dozen large)"
+        unit: "per dozen"
+        stores:
+          # Costco:   "https://www.costco.com/..."
+          # Walmart:  "https://www.walmart.com/ip/..."
+          # Aldi:     "https://www.aldi.us/..."

@@ -1,0 +1,14 @@
+# Store-specific Flipp adapter — EXAMPLE
+# Copy to <your-store-name>.yml (e.g. costco-peoria.yml) for each store.
+# ─────────────────────────────────────────────────────────────────────────
+adapter: flipp
+enabled: true
+schedule: "0 7 * * 1"     # every Monday 7am
+
+# Store name fragment (must match Flipp's store name, case-insensitive)
+stores:
+  - your store name here   # e.g. "costco", "aldi", "target"
+
+# Postal code nearest to this store location
+postal_code: "YOUR_ZIP"    # e.g. "61611"
+locale: en

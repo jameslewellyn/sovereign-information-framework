@@ -1,0 +1,1092 @@
+# Top 200 Home Goods & Grocery Products — Reference Catalog
+#
+# base_unit: the canonical unit used for unit-price comparison.
+#   All pack sizes are normalized to this before computing $/unit.
+#   See src/storage/unit_normalizer.py for conversion rules.
+#
+# Common base_unit values:
+#   roll    — paper products
+#   sheet   — paper towels, dryer sheets
+#   count   — discrete items (pills, pods, bags, wipes)
+#   load    — detergent
+#   oz      — weight-sold items (meat, cheese, nuts, dry goods)
+#   fl oz   — liquid items (beverages, cleaners, oils)
+#   lb      — items conventionally priced per pound (produce, coffee)
+#   sqft    — foil, wrap, parchment
+# ─────────────────────────────────────────────────────────────────────────────
+
+categories:
+
+  # ── Paper Goods ────────────────────────────────────────────────────────────
+  paper-goods:
+    label: Paper Goods
+    products:
+      toilet-paper:
+        label: Toilet Paper
+        base_unit: roll
+        category: Paper Goods
+
+      paper-towels:
+        label: Paper Towels
+        base_unit: sheet
+        category: Paper Goods
+
+      facial-tissues:
+        label: Facial Tissues
+        base_unit: count
+        category: Paper Goods
+
+      paper-napkins:
+        label: Paper Napkins
+        base_unit: count
+        category: Paper Goods
+
+      paper-plates:
+        label: Paper Plates
+        base_unit: count
+        category: Paper Goods
+
+  # ── Cleaning Supplies ──────────────────────────────────────────────────────
+  cleaning:
+    label: Cleaning Supplies
+    products:
+      laundry-detergent-liquid:
+        label: Laundry Detergent (Liquid)
+        base_unit: load
+        category: Cleaning Supplies
+
+      laundry-detergent-pods:
+        label: Laundry Detergent Pods
+        base_unit: count
+        category: Cleaning Supplies
+
+      fabric-softener:
+        label: Fabric Softener
+        base_unit: load
+        category: Cleaning Supplies
+
+      dryer-sheets:
+        label: Dryer Sheets
+        base_unit: count
+        category: Cleaning Supplies
+
+      dish-soap-liquid:
+        label: Dish Soap (Liquid)
+        base_unit: fl oz
+        category: Cleaning Supplies
+
+      dishwasher-pods:
+        label: Dishwasher Pods
+        base_unit: count
+        category: Cleaning Supplies
+
+      all-purpose-cleaner:
+        label: All-Purpose Cleaner
+        base_unit: fl oz
+        category: Cleaning Supplies
+
+      bathroom-cleaner:
+        label: Bathroom Cleaner
+        base_unit: fl oz
+        category: Cleaning Supplies
+
+      toilet-bowl-cleaner:
+        label: Toilet Bowl Cleaner
+        base_unit: fl oz
+        category: Cleaning Supplies
+
+      glass-cleaner:
+        label: Glass Cleaner
+        base_unit: fl oz
+        category: Cleaning Supplies
+
+      bleach:
+        label: Bleach
+        base_unit: fl oz
+        category: Cleaning Supplies
+
+      floor-cleaner:
+        label: Floor Cleaner
+        base_unit: fl oz
+        category: Cleaning Supplies
+
+      sponges:
+        label: Sponges
+        base_unit: count
+        category: Cleaning Supplies
+
+      trash-bags-13gal:
+        label: Trash Bags (13 Gallon)
+        base_unit: count
+        category: Cleaning Supplies
+
+      trash-bags-33gal:
+        label: Trash Bags (33 Gallon)
+        base_unit: count
+        category: Cleaning Supplies
+
+      ziploc-gallon:
+        label: Ziploc Bags (Gallon)
+        base_unit: count
+        category: Cleaning Supplies
+
+      ziploc-sandwich:
+        label: Ziploc Bags (Sandwich)
+        base_unit: count
+        category: Cleaning Supplies
+
+      aluminum-foil:
+        label: Aluminum Foil
+        base_unit: sqft
+        category: Cleaning Supplies
+
+      plastic-wrap:
+        label: Plastic Wrap
+        base_unit: sqft
+        category: Cleaning Supplies
+
+      parchment-paper:
+        label: Parchment Paper
+        base_unit: sqft
+        category: Cleaning Supplies
+
+  # ── Personal Care ──────────────────────────────────────────────────────────
+  personal-care:
+    label: Personal Care
+    products:
+      shampoo:
+        label: Shampoo
+        base_unit: fl oz
+        category: Personal Care
+
+      conditioner:
+        label: Conditioner
+        base_unit: fl oz
+        category: Personal Care
+
+      body-wash:
+        label: Body Wash
+        base_unit: fl oz
+        category: Personal Care
+
+      bar-soap:
+        label: Bar Soap
+        base_unit: oz
+        category: Personal Care
+
+      toothpaste:
+        label: Toothpaste
+        base_unit: oz
+        category: Personal Care
+
+      toothbrush:
+        label: Toothbrush
+        base_unit: count
+        category: Personal Care
+
+      dental-floss:
+        label: Dental Floss
+        base_unit: count   # yards/m packs — compare by pack count
+        category: Personal Care
+
+      mouthwash:
+        label: Mouthwash
+        base_unit: fl oz
+        category: Personal Care
+
+      deodorant:
+        label: Deodorant
+        base_unit: oz
+        category: Personal Care
+
+      razor-blades:
+        label: Razor Blades
+        base_unit: count
+        category: Personal Care
+
+      shaving-cream:
+        label: Shaving Cream
+        base_unit: oz
+        category: Personal Care
+
+      lotion:
+        label: Lotion / Moisturizer
+        base_unit: fl oz
+        category: Personal Care
+
+      sunscreen:
+        label: Sunscreen (SPF 50)
+        base_unit: fl oz
+        category: Personal Care
+
+      cotton-balls:
+        label: Cotton Balls
+        base_unit: count
+        category: Personal Care
+
+      cotton-swabs:
+        label: Cotton Swabs (Q-Tips)
+        base_unit: count
+        category: Personal Care
+
+      band-aids:
+        label: Bandages / Band-Aids
+        base_unit: count
+        category: Personal Care
+
+      feminine-pads:
+        label: Feminine Pads
+        base_unit: count
+        category: Personal Care
+
+      tampons:
+        label: Tampons
+        base_unit: count
+        category: Personal Care
+
+      hand-soap-liquid:
+        label: Hand Soap (Liquid)
+        base_unit: fl oz
+        category: Personal Care
+
+  # ── Beverages ──────────────────────────────────────────────────────────────
+  beverages:
+    label: Beverages
+    products:
+      ground-coffee:
+        label: Ground Coffee
+        base_unit: oz
+        category: Beverages
+
+      coffee-pods-kcup:
+        label: Coffee Pods (K-Cup)
+        base_unit: count
+        category: Beverages
+
+      tea-bags:
+        label: Tea Bags
+        base_unit: count
+        category: Beverages
+
+      orange-juice:
+        label: Orange Juice
+        base_unit: fl oz
+        category: Beverages
+
+      apple-juice:
+        label: Apple Juice
+        base_unit: fl oz
+        category: Beverages
+
+      bottled-water:
+        label: Bottled Water
+        base_unit: fl oz
+        category: Beverages
+
+      sports-drink:
+        label: Sports Drink (Gatorade / Powerade)
+        base_unit: fl oz
+        category: Beverages
+
+      soda-cola:
+        label: Soda (Cola)
+        base_unit: fl oz
+        category: Beverages
+
+      sparkling-water:
+        label: Sparkling Water
+        base_unit: fl oz
+        category: Beverages
+
+      almond-milk:
+        label: Almond Milk
+        base_unit: fl oz
+        category: Beverages
+
+      oat-milk:
+        label: Oat Milk
+        base_unit: fl oz
+        category: Beverages
+
+  # ── Dairy ──────────────────────────────────────────────────────────────────
+  dairy:
+    label: Dairy
+    products:
+      whole-milk:
+        label: Whole Milk
+        base_unit: fl oz
+        category: Dairy
+
+      eggs:
+        label: Eggs (Large)
+        base_unit: count
+        category: Dairy
+
+      butter:
+        label: Butter (Unsalted)
+        base_unit: oz
+        category: Dairy
+
+      shredded-cheese:
+        label: Shredded Cheese
+        base_unit: oz
+        category: Dairy
+
+      block-cheese:
+        label: Block Cheese (Cheddar)
+        base_unit: oz
+        category: Dairy
+
+      cream-cheese:
+        label: Cream Cheese
+        base_unit: oz
+        category: Dairy
+
+      sour-cream:
+        label: Sour Cream
+        base_unit: oz
+        category: Dairy
+
+      greek-yogurt:
+        label: Greek Yogurt
+        base_unit: oz
+        category: Dairy
+
+      heavy-cream:
+        label: Heavy Cream
+        base_unit: fl oz
+        category: Dairy
+
+      half-and-half:
+        label: Half and Half
+        base_unit: fl oz
+        category: Dairy
+
+      cottage-cheese:
+        label: Cottage Cheese
+        base_unit: oz
+        category: Dairy
+
+  # ── Meat & Seafood ─────────────────────────────────────────────────────────
+  meat-seafood:
+    label: Meat & Seafood
+    products:
+      chicken-breast:
+        label: Boneless Skinless Chicken Breast
+        base_unit: oz
+        category: Meat & Seafood
+
+      chicken-thighs:
+        label: Boneless Skinless Chicken Thighs
+        base_unit: oz
+        category: Meat & Seafood
+
+      ground-beef:
+        label: Ground Beef (80/20)
+        base_unit: oz
+        category: Meat & Seafood
+
+      steak-ribeye:
+        label: Ribeye Steak
+        base_unit: oz
+        category: Meat & Seafood
+
+      pork-chops:
+        label: Pork Chops (Boneless)
+        base_unit: oz
+        category: Meat & Seafood
+
+      bacon:
+        label: Bacon
+        base_unit: oz
+        category: Meat & Seafood
+
+      salmon-fillet:
+        label: Salmon Fillet
+        base_unit: oz
+        category: Meat & Seafood
+
+      shrimp-frozen:
+        label: Shrimp (Frozen, Peeled)
+        base_unit: oz
+        category: Meat & Seafood
+
+      tilapia:
+        label: Tilapia Fillet
+        base_unit: oz
+        category: Meat & Seafood
+
+      hot-dogs:
+        label: Hot Dogs
+        base_unit: count
+        category: Meat & Seafood
+
+      deli-turkey:
+        label: Deli Turkey
+        base_unit: oz
+        category: Meat & Seafood
+
+      deli-ham:
+        label: Deli Ham
+        base_unit: oz
+        category: Meat & Seafood
+
+  # ── Fresh Produce ──────────────────────────────────────────────────────────
+  produce:
+    label: Fresh Produce
+    products:
+      bananas:
+        label: Bananas
+        base_unit: oz
+        category: Fresh Produce
+
+      apples:
+        label: Apples (Gala / Fuji)
+        base_unit: oz
+        category: Fresh Produce
+
+      oranges:
+        label: Oranges / Navel
+        base_unit: oz
+        category: Fresh Produce
+
+      strawberries:
+        label: Strawberries
+        base_unit: oz
+        category: Fresh Produce
+
+      blueberries:
+        label: Blueberries
+        base_unit: oz
+        category: Fresh Produce
+
+      grapes:
+        label: Red / Green Grapes
+        base_unit: oz
+        category: Fresh Produce
+
+      lemons:
+        label: Lemons
+        base_unit: count
+        category: Fresh Produce
+
+      avocados:
+        label: Avocados
+        base_unit: count
+        category: Fresh Produce
+
+      tomatoes:
+        label: Tomatoes (Roma / Vine)
+        base_unit: oz
+        category: Fresh Produce
+
+      baby-spinach:
+        label: Baby Spinach
+        base_unit: oz
+        category: Fresh Produce
+
+      romaine-lettuce:
+        label: Romaine Lettuce
+        base_unit: oz
+        category: Fresh Produce
+
+      broccoli:
+        label: Broccoli
+        base_unit: oz
+        category: Fresh Produce
+
+      carrots:
+        label: Carrots (Baby / Regular)
+        base_unit: oz
+        category: Fresh Produce
+
+      russet-potatoes:
+        label: Russet Potatoes
+        base_unit: oz
+        category: Fresh Produce
+
+      sweet-potatoes:
+        label: Sweet Potatoes
+        base_unit: oz
+        category: Fresh Produce
+
+      yellow-onions:
+        label: Yellow Onions
+        base_unit: oz
+        category: Fresh Produce
+
+      garlic:
+        label: Garlic (Head / Jar)
+        base_unit: oz
+        category: Fresh Produce
+
+      bell-peppers:
+        label: Bell Peppers
+        base_unit: oz
+        category: Fresh Produce
+
+      cucumbers:
+        label: Cucumbers
+        base_unit: count
+        category: Fresh Produce
+
+      celery:
+        label: Celery
+        base_unit: oz
+        category: Fresh Produce
+
+  # ── Pantry & Dry Goods ─────────────────────────────────────────────────────
+  pantry:
+    label: Pantry & Dry Goods
+    products:
+      white-rice:
+        label: White Rice (Long Grain)
+        base_unit: oz
+        category: Pantry & Dry Goods
+
+      brown-rice:
+        label: Brown Rice
+        base_unit: oz
+        category: Pantry & Dry Goods
+
+      pasta-spaghetti:
+        label: Pasta (Spaghetti)
+        base_unit: oz
+        category: Pantry & Dry Goods
+
+      pasta-penne:
+        label: Pasta (Penne / Rotini)
+        base_unit: oz
+        category: Pantry & Dry Goods
+
+      all-purpose-flour:
+        label: All-Purpose Flour
+        base_unit: oz
+        category: Pantry & Dry Goods
+
+      white-sugar:
+        label: White Sugar (Granulated)
+        base_unit: oz
+        category: Pantry & Dry Goods
+
+      brown-sugar:
+        label: Brown Sugar
+        base_unit: oz
+        category: Pantry & Dry Goods
+
+      olive-oil:
+        label: Olive Oil (Extra Virgin)
+        base_unit: fl oz
+        category: Pantry & Dry Goods
+
+      vegetable-oil:
+        label: Vegetable Oil
+        base_unit: fl oz
+        category: Pantry & Dry Goods
+
+      canola-oil:
+        label: Canola Oil
+        base_unit: fl oz
+        category: Pantry & Dry Goods
+
+      chicken-broth:
+        label: Chicken Broth / Stock
+        base_unit: fl oz
+        category: Pantry & Dry Goods
+
+      peanut-butter:
+        label: Peanut Butter
+        base_unit: oz
+        category: Pantry & Dry Goods
+
+      almond-butter:
+        label: Almond Butter
+        base_unit: oz
+        category: Pantry & Dry Goods
+
+      jelly-jam:
+        label: Jelly / Jam (Strawberry)
+        base_unit: oz
+        category: Pantry & Dry Goods
+
+      honey:
+        label: Honey
+        base_unit: oz
+        category: Pantry & Dry Goods
+
+      maple-syrup:
+        label: Maple Syrup
+        base_unit: fl oz
+        category: Pantry & Dry Goods
+
+      soy-sauce:
+        label: Soy Sauce
+        base_unit: fl oz
+        category: Pantry & Dry Goods
+
+      hot-sauce:
+        label: Hot Sauce
+        base_unit: fl oz
+        category: Pantry & Dry Goods
+
+      ketchup:
+        label: Ketchup
+        base_unit: oz
+        category: Pantry & Dry Goods
+
+      yellow-mustard:
+        label: Yellow Mustard
+        base_unit: oz
+        category: Pantry & Dry Goods
+
+      mayonnaise:
+        label: Mayonnaise
+        base_unit: oz
+        category: Pantry & Dry Goods
+
+      salsa:
+        label: Salsa
+        base_unit: oz
+        category: Pantry & Dry Goods
+
+      bbq-sauce:
+        label: BBQ Sauce
+        base_unit: oz
+        category: Pantry & Dry Goods
+
+      ranch-dressing:
+        label: Ranch Dressing
+        base_unit: fl oz
+        category: Pantry & Dry Goods
+
+      italian-dressing:
+        label: Italian Dressing
+        base_unit: fl oz
+        category: Pantry & Dry Goods
+
+      baking-soda:
+        label: Baking Soda
+        base_unit: oz
+        category: Pantry & Dry Goods
+
+      baking-powder:
+        label: Baking Powder
+        base_unit: oz
+        category: Pantry & Dry Goods
+
+      salt-iodized:
+        label: Salt (Iodized / Kosher)
+        base_unit: oz
+        category: Pantry & Dry Goods
+
+      black-pepper:
+        label: Black Pepper (Ground)
+        base_unit: oz
+        category: Pantry & Dry Goods
+
+      garlic-powder:
+        label: Garlic Powder
+        base_unit: oz
+        category: Pantry & Dry Goods
+
+      cumin:
+        label: Cumin (Ground)
+        base_unit: oz
+        category: Pantry & Dry Goods
+
+      cinnamon:
+        label: Cinnamon (Ground)
+        base_unit: oz
+        category: Pantry & Dry Goods
+
+      vanilla-extract:
+        label: Vanilla Extract
+        base_unit: fl oz
+        category: Pantry & Dry Goods
+
+      cocoa-powder:
+        label: Cocoa Powder (Unsweetened)
+        base_unit: oz
+        category: Pantry & Dry Goods
+
+  # ── Canned & Jarred ────────────────────────────────────────────────────────
+  canned-goods:
+    label: Canned & Jarred Goods
+    products:
+      canned-black-beans:
+        label: Canned Black Beans
+        base_unit: oz
+        category: Canned & Jarred Goods
+
+      canned-chickpeas:
+        label: Canned Chickpeas / Garbanzo
+        base_unit: oz
+        category: Canned & Jarred Goods
+
+      canned-tomatoes-diced:
+        label: Canned Diced Tomatoes
+        base_unit: oz
+        category: Canned & Jarred Goods
+
+      canned-tomato-sauce:
+        label: Canned Tomato Sauce
+        base_unit: oz
+        category: Canned & Jarred Goods
+
+      canned-tuna:
+        label: Canned Tuna (in Water)
+        base_unit: oz
+        category: Canned & Jarred Goods
+
+      canned-corn:
+        label: Canned Corn
+        base_unit: oz
+        category: Canned & Jarred Goods
+
+      canned-green-beans:
+        label: Canned Green Beans
+        base_unit: oz
+        category: Canned & Jarred Goods
+
+      canned-soup-chicken-noodle:
+        label: Canned Soup (Chicken Noodle)
+        base_unit: oz
+        category: Canned & Jarred Goods
+
+      canned-soup-tomato:
+        label: Canned Soup (Tomato)
+        base_unit: oz
+        category: Canned & Jarred Goods
+
+      canned-pineapple:
+        label: Canned Pineapple
+        base_unit: oz
+        category: Canned & Jarred Goods
+
+      canned-peaches:
+        label: Canned Peaches
+        base_unit: oz
+        category: Canned & Jarred Goods
+
+      pasta-sauce-marinara:
+        label: Pasta Sauce (Marinara)
+        base_unit: oz
+        category: Canned & Jarred Goods
+
+  # ── Bread & Baked Goods ────────────────────────────────────────────────────
+  bread:
+    label: Bread & Baked Goods
+    products:
+      white-bread:
+        label: White Bread (Sandwich Loaf)
+        base_unit: oz
+        category: Bread & Baked Goods
+
+      whole-wheat-bread:
+        label: Whole Wheat Bread
+        base_unit: oz
+        category: Bread & Baked Goods
+
+      flour-tortillas:
+        label: Flour Tortillas
+        base_unit: count
+        category: Bread & Baked Goods
+
+      corn-tortillas:
+        label: Corn Tortillas
+        base_unit: count
+        category: Bread & Baked Goods
+
+      bagels:
+        label: Bagels
+        base_unit: count
+        category: Bread & Baked Goods
+
+      english-muffins:
+        label: English Muffins
+        base_unit: count
+        category: Bread & Baked Goods
+
+  # ── Cereal & Breakfast ─────────────────────────────────────────────────────
+  breakfast:
+    label: Cereal & Breakfast
+    products:
+      oatmeal:
+        label: Rolled Oats / Oatmeal
+        base_unit: oz
+        category: Cereal & Breakfast
+
+      granola:
+        label: Granola
+        base_unit: oz
+        category: Cereal & Breakfast
+
+      corn-flakes:
+        label: Corn Flakes / Cornflakes
+        base_unit: oz
+        category: Cereal & Breakfast
+
+      cheerios:
+        label: Cheerios (Original)
+        base_unit: oz
+        category: Cereal & Breakfast
+
+      granola-bars:
+        label: Granola Bars
+        base_unit: count
+        category: Cereal & Breakfast
+
+      pancake-mix:
+        label: Pancake Mix
+        base_unit: oz
+        category: Cereal & Breakfast
+
+  # ── Snacks ─────────────────────────────────────────────────────────────────
+  snacks:
+    label: Snacks
+    products:
+      potato-chips:
+        label: Potato Chips
+        base_unit: oz
+        category: Snacks
+
+      tortilla-chips:
+        label: Tortilla Chips
+        base_unit: oz
+        category: Snacks
+
+      crackers:
+        label: Crackers (Saltine / Ritz)
+        base_unit: oz
+        category: Snacks
+
+      pretzels:
+        label: Pretzels
+        base_unit: oz
+        category: Snacks
+
+      mixed-nuts:
+        label: Mixed Nuts
+        base_unit: oz
+        category: Snacks
+
+      trail-mix:
+        label: Trail Mix
+        base_unit: oz
+        category: Snacks
+
+      popcorn-microwave:
+        label: Microwave Popcorn
+        base_unit: oz
+        category: Snacks
+
+      chocolate-chip-cookies:
+        label: Chocolate Chip Cookies
+        base_unit: oz
+        category: Snacks
+
+      oreo-cookies:
+        label: Oreo Cookies
+        base_unit: oz
+        category: Snacks
+
+      protein-bars:
+        label: Protein Bars
+        base_unit: count
+        category: Snacks
+
+  # ── Frozen Foods ───────────────────────────────────────────────────────────
+  frozen:
+    label: Frozen Foods
+    products:
+      frozen-broccoli:
+        label: Frozen Broccoli
+        base_unit: oz
+        category: Frozen Foods
+
+      frozen-peas:
+        label: Frozen Peas
+        base_unit: oz
+        category: Frozen Foods
+
+      frozen-corn:
+        label: Frozen Corn
+        base_unit: oz
+        category: Frozen Foods
+
+      frozen-mixed-veggies:
+        label: Frozen Mixed Vegetables
+        base_unit: oz
+        category: Frozen Foods
+
+      frozen-pizza:
+        label: Frozen Pizza
+        base_unit: oz
+        category: Frozen Foods
+
+      frozen-waffles:
+        label: Frozen Waffles
+        base_unit: count
+        category: Frozen Foods
+
+      frozen-burritos:
+        label: Frozen Burritos
+        base_unit: count
+        category: Frozen Foods
+
+      ice-cream:
+        label: Ice Cream
+        base_unit: fl oz
+        category: Frozen Foods
+
+  # ── Baby & Infant ──────────────────────────────────────────────────────────
+  baby:
+    label: Baby & Infant
+    products:
+      diapers-size1:
+        label: Diapers (Size 1, up to 14 lb)
+        base_unit: count
+        category: Baby & Infant
+
+      diapers-size2:
+        label: Diapers (Size 2, 12–18 lb)
+        base_unit: count
+        category: Baby & Infant
+
+      diapers-size3:
+        label: Diapers (Size 3, 16–28 lb)
+        base_unit: count
+        category: Baby & Infant
+
+      diapers-size4:
+        label: Diapers (Size 4, 22–37 lb)
+        base_unit: count
+        category: Baby & Infant
+
+      baby-wipes:
+        label: Baby Wipes
+        base_unit: count
+        category: Baby & Infant
+
+      baby-formula:
+        label: Baby Formula (Powder)
+        base_unit: oz
+        category: Baby & Infant
+
+      baby-shampoo:
+        label: Baby Shampoo / Wash
+        base_unit: fl oz
+        category: Baby & Infant
+
+      baby-food-puree:
+        label: Baby Food (Puree Pouches)
+        base_unit: oz
+        category: Baby & Infant
+
+  # ── Pet Supplies ───────────────────────────────────────────────────────────
+  pet:
+    label: Pet Supplies
+    products:
+      dry-dog-food:
+        label: Dry Dog Food
+        base_unit: oz
+        category: Pet Supplies
+
+      wet-dog-food:
+        label: Wet Dog Food (Canned)
+        base_unit: oz
+        category: Pet Supplies
+
+      dry-cat-food:
+        label: Dry Cat Food
+        base_unit: oz
+        category: Pet Supplies
+
+      wet-cat-food:
+        label: Wet Cat Food (Canned)
+        base_unit: oz
+        category: Pet Supplies
+
+      cat-litter:
+        label: Cat Litter (Clumping)
+        base_unit: oz
+        category: Pet Supplies
+
+      dog-treats:
+        label: Dog Treats
+        base_unit: oz
+        category: Pet Supplies
+
+      cat-treats:
+        label: Cat Treats
+        base_unit: oz
+        category: Pet Supplies
+
+  # ── Health & OTC ───────────────────────────────────────────────────────────
+  health-otc:
+    label: Health & OTC
+    products:
+      ibuprofen:
+        label: Ibuprofen (200 mg)
+        base_unit: count
+        category: Health & OTC
+
+      acetaminophen:
+        label: Acetaminophen / Tylenol (500 mg)
+        base_unit: count
+        category: Health & OTC
+
+      vitamin-c:
+        label: Vitamin C (500–1000 mg)
+        base_unit: count
+        category: Health & OTC
+
+      vitamin-d:
+        label: Vitamin D3 (1000–2000 IU)
+        base_unit: count
+        category: Health & OTC
+
+      multivitamin:
+        label: Multivitamin (Daily)
+        base_unit: count
+        category: Health & OTC
+
+      fish-oil:
+        label: Fish Oil / Omega-3
+        base_unit: count
+        category: Health & OTC
+
+      melatonin:
+        label: Melatonin (3–10 mg)
+        base_unit: count
+        category: Health & OTC
+
+      allergy-cetirizine:
+        label: Allergy Relief (Cetirizine / Zyrtec generic)
+        base_unit: count
+        category: Health & OTC
+
+      antacids:
+        label: Antacids (Calcium Carbonate / Tums)
+        base_unit: count
+        category: Health & OTC
+
+      hand-sanitizer:
+        label: Hand Sanitizer
+        base_unit: fl oz
+        category: Health & OTC
+
+      face-masks:
+        label: Face Masks (Disposable)
+        base_unit: count
+        category: Health & OTC
+
+      hydrogen-peroxide:
+        label: Hydrogen Peroxide (3%)
+        base_unit: fl oz
+        category: Health & OTC
+
+      rubbing-alcohol:
+        label: Rubbing Alcohol (70–91%)
+        base_unit: fl oz
+        category: Health & OTC

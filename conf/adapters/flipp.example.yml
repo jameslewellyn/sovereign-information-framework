@@ -1,0 +1,20 @@
+# Flipp flyer adapter — EXAMPLE
+# Copy to flipp.yml and set your postal code and store list.
+# ─────────────────────────────────────────────────────────────────────────
+adapter: flipp
+enabled: true
+schedule: "0 6 * * 2"      # every Tuesday at 6am (flyers typically refresh Tue/Wed)
+
+# Your postal code — determines which store flyers are available
+postal_code: "YOUR_POSTAL_CODE"    # e.g. "61611" or "V5K0A1"
+locale: en
+
+# Stores to query by name fragment (case-insensitive)
+# Leave empty ([]) to fetch all stores available at your postal code
+stores:
+  - walmart
+  - target
+  - aldi
+  # - safeway
+  # - kroger
+  # - costco  (Costco flyers are not on Flipp — use a dedicated adapter)

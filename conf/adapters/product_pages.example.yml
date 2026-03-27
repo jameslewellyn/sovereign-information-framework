@@ -1,0 +1,16 @@
+# Product page adapter — EXAMPLE
+# Copy to product_pages.yml and configure your LLM preference.
+# ─────────────────────────────────────────────────────────────────────────
+adapter: product_page
+enabled: true
+schedule: "0 4 * * 0"     # every Sunday 4am — everyday prices change slowly
+
+# LLM used to extract price from page HTML.
+# Options:
+#   ollama/llama3.2       — free, runs locally (requires Ollama installed)
+#   openai/gpt-4o-mini    — fast, cheap cloud (~$0.001/page)
+#   anthropic/claude-3-haiku — accurate, low cost
+llm_model: "ollama/llama3.2"
+
+# Path to the product catalog — the adapter reads all stores+URLs from here
+catalog_path: "conf/products/catalog.yml"

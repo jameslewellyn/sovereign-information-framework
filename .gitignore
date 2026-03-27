@@ -1,0 +1,62 @@
+# ── Database ──────────────────────────────────────────────────────────────────
+# DuckDB files grow large and contain personal price history. Never commit.
+data/*
+!data/.gitkeep
+*.duckdb
+*.duckdb.wal
+
+# ── Logs ──────────────────────────────────────────────────────────────────────
+logs/*
+!logs/.gitkeep
+*.log
+
+# ── Secrets ───────────────────────────────────────────────────────────────────
+# Copy .env.example → .env and fill in your values.
+.env
+
+# ── Personal configuration ────────────────────────────────────────────────────
+# These files contain your specific store locations, postal codes, brand
+# preferences, and product page URLs. They must not be committed.
+#
+# To get started:
+#   cp conf/brands/watchlist.example.yml    conf/brands/watchlist.yml
+#   cp conf/products/catalog.example.yml    conf/products/catalog.yml
+#   cp conf/adapters/flipp.example.yml      conf/adapters/flipp.yml
+#   cp conf/adapters/product_pages.example.yml conf/adapters/product_pages.yml
+#
+# Then edit each file with your own stores, postal code, brands, and URLs.
+
+# Brand & category preferences (which brands/deals matter to you)
+conf/brands/watchlist.yml
+
+# Product catalog with your store-specific URLs
+conf/products/catalog.yml
+
+# All adapter configs (contain postal codes, store lists, schedules)
+conf/adapters/*.yml
+# ...but keep the example templates
+!conf/adapters/*.example.yml
+
+# ── Python runtime artifacts ──────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+dist/
+build/
+*.egg-info/
+
+# ── Virtual environments ──────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+
+# ── Editor / OS ───────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo

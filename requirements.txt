@@ -1,0 +1,13 @@
+httpx
+pydantic>=2.0
+pyyaml
+python-dotenv
+apscheduler>=3.10
+duckdb
+instructor
+crawl4ai
+playwright
+pdf2image
+Pillow
+ollama
+openai
